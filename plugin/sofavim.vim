@@ -20,6 +20,7 @@ function s:SofaGenerateComponent(namespace, motherclass, classname)
 	:silent exe '0r $HOME/.vim/bundle/sofavim/templates/sofa_licence'
 	:silent exe '%s/_componenttype_/' . a:namespace . '/g'
 	:silent exe '%s/_ComponentName_/' . a:classname . '/g'
+	:silent exe '%s/_ComponentNameClass_/' . a:classname . 'Class/g'
 	:silent exe 'w '. a:classname . '.cpp'
 
 	"TODO: Add entry in the CMakeLists.txt of the current plugin
